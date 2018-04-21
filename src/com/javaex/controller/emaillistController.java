@@ -35,7 +35,6 @@ public class emaillistController extends HttpServlet {
 			String lastName = request.getParameter("ln");
 			String firstName = request.getParameter("fn");
 			String email = request.getParameter("email");
-
 			EmailVO vo = new EmailVO(lastName, firstName, email);
 			EmaillistDao dao = new EmaillistDao();
 			dao.insert(vo);
