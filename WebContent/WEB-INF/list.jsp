@@ -1,9 +1,11 @@
-<%@page import="com.javaex.vo.EmailVO"%>
+<%@page import="com.javaex.vo.EmailVo"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<% List<EmailVO> list=(List<EmailVO>)request.getAttribute("list"); %>
+<%
+	List<EmailVo> list=(List<EmailVo>)request.getAttribute("list");
+%>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -19,8 +21,8 @@
 	<%-- list에서 하나씩 빼서 테이블를 채운다--%>
 	
 	<%
-	for(EmailVO vo : list){
-	%>
+			for(EmailVo vo : list){
+		%>
 	
 	<table border="1" cellpadding="5" cellspacing="2">
 		<tr>
